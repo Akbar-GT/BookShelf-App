@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+html {
+    font-family: 'Quicksand', Verdana, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.head-bar {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background-color: rgb(10, 216, 216);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container {
+    margin: 0 20px;
+    padding: 20px;
+    background: url('../assets/background/Large-Triangles.svg');
+    background-position: center;
+}
+
+.main {
+    flex-grow: 2;
+}
+
+.input-content {
+    margin: 10px 0;
+}
+
+.input-content > label {
+    font-size: 1.15rem;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid rgb(148, 148, 148);
+    border-radius: 5px;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgb(125, 213, 235);
+    border: 1px solid rgb(125, 213, 235);
+    outline: none;
+}
+
+input[type=checkbox] {
+    display: inline;
+    width: fit-content;
+}
+
+.input-container button {
+    background-color: rgb(0, 153, 180);
+    width: 100%;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 1.25rem;
+    height: 40px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.search-container input {
+    margin: 0 10px;
+    width: 70%;
+}
+
+.search-container button {
+    width: 20%;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 153, 180);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.side {
+    flex-grow: 1;
+    flex-basis: 15vw;
+}
+
+.book-list {
+    height: 400px;
+    overflow-y: auto;
+}
+
+.book-list > .book-item {
+    padding: 8px 16px 16px 8px;
+    border: 1px solid rgb(165, 164, 164);
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.book-list > .book-item > h3, p {
+    margin: 8px 0;
+}
+
+.book-list > .book-item > .action > button {
+    border: 0;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book-list > .book-item > .action > .green {
+    background-color: darkgreen;
+    color: white;
+}
+
+.book-list > .book-item > .action > .red {
+    background-color: darkred; 
+    color: white;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(10, 216, 216);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 1.25;
+    margin-top: 10px;
+}
+
+.container-title {
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-collumn {
+    flex-direction: column;
+}
+
+.box-shadow {
+    box-shadow: 0 5px 10px rgb(223, 221, 221);
+}
+
+.card {
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 20px;
+}
+
+#icon {
+    display: block;
+    height: 200px;
+    background-image: url("../js/clipart3877752.png");
+}
+
+@media screen and (max-width: 1050px) {
+    main.flex {
+        flex-direction: column;
+    }
+    
+    .main,
+    .side {
+        width: 90%;
+        align-self: center;
+        margin: 20px;
+    }
+
+    .book-list {
+        display: flex;
+        width: 100%;
+        height: fit-content;
+        min-height: 100px;
+        overflow-x: auto;
+    }
+
+    .book-item {
+        flex-basis: 300px;
+        min-width: 300px;
+        height: fit-content;
+        margin-right: 20px;
+    }
+}

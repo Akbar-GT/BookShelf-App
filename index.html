@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bookshelf App</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/icons.css">
+        <link rel="icon" href="./assets/icon.png">
+    </head>
+
+    <body class="flex flex-collumn">
+        <header>
+            <h1 class="head-bar box-shadow">BookShelf-App</h1>
+        </header>
+        <main class="flex">
+            <section class="main container card box-shadow flex flex-collumn">
+                <div class="input-container">
+                    <h2 class="container-title">Insert New Book</h2>
+                    <form id="inputBook">
+                        <div class="input-content">
+                            <label for="title">Title</label> <br>
+                            <input type="text" id="inputTitle" value="" required>
+                        </div>
+                        <div class="input-content">
+                            <label for="author">Author</label><br>
+                            <input type="text" id="inputAuthor" value="" required>
+                        </div>
+                        <div class="input-content">
+                            <label for="year">Year</label><br>
+                            <input type="number" id="inputYear" value="" required>
+                        </div>
+                        <div class=input-content>
+                            <label for="complete">Complete Yet?</label><br>
+                            <input type="checkbox" id="inputisComplete">
+                        </div>
+                        <button type="submit" id="insertButton">Insert Book</button>
+                    </form>
+                </div>
+                <div class="search-container ">
+                    <h2 class="container-title">Search Book</h2>
+                    <form id="searchBook">
+                        <div class="input-content flex">
+                            <label for="search">Title</label>
+                            <input type="text" id="inputSearchTitle" value="">
+                            <button type="submit" id="searchButton">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="side container card box-shadow">
+                <h2 class="container-title">Reading</h2>
+                <div id="incompleteBookshelfList" class="book-list">
+                </div>
+            </section>
+            <section class="side container card box-shadow">
+                <h2 class="container-title">Finished</h2>
+                <div id="completeBookshelfList" class="book-list">
+                </div>
+            </section>
+        </main>
+        <footer>
+            Created By Akbar Tuasikal
+        </footer>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
